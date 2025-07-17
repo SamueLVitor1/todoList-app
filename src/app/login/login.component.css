@@ -3,7 +3,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #fff;          
+  background-color: #fff;
 }
 
 .login-card {
@@ -11,11 +11,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;                       
+  margin: auto;
   width: 100%;
   max-width: 360px;
   padding: 2rem;
-  
+
   mat-card {
     box-shadow: none;
     border-radius: 12px;
@@ -23,14 +23,6 @@
 
   border-radius: 12px;
   text-align: center;
-
-  .logo {
-    margin-bottom: 1rem;
-    img {
-      width: 100px;
-    }
-  }
-
   h2 {
     font-weight: 500;
     margin-bottom: 1.5rem;
@@ -56,8 +48,42 @@
   }
 }
 
+.login-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  align-self: flex-start;
+  height: 32px;
+}
+
+.welcome-text {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  h1{
+    align-self: flex-start;
+    font-size: 36px;
+  }
+
+  p{
+    align-self: flex-start;
+    text-align: justify;
+    margin-top: -4px;
+    margin-bottom: 2rem;
+  }
+}
+
+.button-primary{
+  background-color: #22c55e !important;
+  color: #052e16 !important;
+  font-weight: 600;
+}
+
 .image-bg {
-  background-image: url('../../assets/Frame 1.svg');
+  background-image: url("../../assets/Frame 1.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
