@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
         timeOut: 3000,
         preventDuplicates: true,
       })
-    ),
+    ), provideAnimationsAsync(),
   ],
 };

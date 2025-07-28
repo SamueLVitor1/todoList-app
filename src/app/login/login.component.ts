@@ -70,6 +70,7 @@ export class LoginComponent implements OnInit {
               'Bem-vindo de volta!'
             );
             this.loading = false;
+            this.router.navigate(['/home'])
           },
           error: () => {
             this.toastr.error('E-mail ou senha incorretos.', 'Falha no login');

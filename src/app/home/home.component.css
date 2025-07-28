@@ -1,0 +1,77 @@
+.wrapper {
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 31rem;
+}
+
+.header {
+  align-self: flex-start;
+}
+
+.main {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  width: 100%;
+}
+
+.main-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.count {
+  background-color: aqua;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600 ;
+}
+
+.count-criadas {
+  background-color: #e9cce1;
+  color: #884074;
+}
+
+.count-concluidas{
+    background-color: #CDDFCC;
+    color: #2F5C2D;
+}
+
+.button-action{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #F4E6F0;
+  padding: 1rem 1.25rem;
+  border: 0px;
+  color: #332E32;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-action:hover{
+  background-color: #E9CCE1;
+}
+
+.button-action mat-icon{
+  color: #C257A4;
+}
