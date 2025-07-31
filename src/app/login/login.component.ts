@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CommonModule } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
+import { StorageService } from '../service/storage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -43,7 +44,8 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private loginService: LoginService,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private storageService: StorageService
   ) {}
 
   ngOnInit() {
@@ -64,12 +66,14 @@ export class LoginComponent implements OnInit {
       this.loginService
         .login(this.loginForm.value as LoginRequestInterface)
         .subscribe({
-          next: () => {
+          next: (data: any) => {
             this.toastr.success(
               'Login realizado com sucesso!',
               'Bem-vindo de volta!'
             );
             this.loading = false;
+            this.storageService.setItem('token', data.token);
+            console.log(data)
             this.router.navigate(['/home'])
           },
           error: () => {
