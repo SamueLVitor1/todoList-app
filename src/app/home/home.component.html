@@ -1,6 +1,21 @@
 <div class="wrapper">
   <header class="header">
-    <img src="../../assets/Logo.svg" alt="" class="header__logo">
+    <img
+      src="../../assets/Logo.svg"
+      alt="Logo ToDo List"
+      class="header__logo"
+    />
+    <div class="header__user">
+      <span class="header__username">Olá, Samuel</span>
+      <button
+        type="button"
+        aria-label="Sair"
+        class="header__logout"
+        onclick="logout()"
+      >
+        <mat-icon fontIcon="logout" aria-hidden="true"></mat-icon>
+      </button>
+    </div>
   </header>
 
   <main class="main">
@@ -8,24 +23,23 @@
       <div class="count-container">
         Tarefas Criadas
 
-        <div class="count count-criadas">
-          0
-        </div>
+        <div class="count count-criadas">0</div>
       </div>
 
       <div class="count-container">
         Concluídas
 
-         <div class="count count-concluidas">
-          0
-        </div>
+        <div class="count count-concluidas">0</div>
       </div>
     </header>
 
     <button class="button-action" type="button">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="add"
+      ></mat-icon>
       <span>Nova Tarefa</span>
     </button>
   </main>
-
 </div>

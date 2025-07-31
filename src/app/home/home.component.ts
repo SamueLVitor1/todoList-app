@@ -9,6 +9,9 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+logout() {
+throw new Error('Method not implemented.');
+}
 
   constructor() { }
 

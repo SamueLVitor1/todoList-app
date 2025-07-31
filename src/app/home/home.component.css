@@ -9,7 +9,7 @@
   max-width: 31rem;
 }
 
-.header {
+.logo-wrapper {
   align-self: flex-start;
 }
 
@@ -39,7 +39,7 @@
   background-color: aqua;
   padding: 2px 8px;
   border-radius: 999px;
-  font-weight: 600 ;
+  font-weight: 600;
 }
 
 .count-criadas {
@@ -47,31 +47,85 @@
   color: #884074;
 }
 
-.count-concluidas{
-    background-color: #CDDFCC;
-    color: #2F5C2D;
+.count-concluidas {
+  background-color: #cddfcc;
+  color: #2f5c2d;
 }
 
-.button-action{
+.button-action {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #F4E6F0;
+  background-color: #f4e6f0;
   padding: 1rem 1.25rem;
   border: 0px;
-  color: #332E32;
+  color: #332e32;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.2s, outline-color 0.2s;
 }
 
-.button-action:hover{
-  background-color: #E9CCE1;
+.button-action:focus-visible {
+  outline: 2px solid #c257a4;
+  outline-offset: 2px;
+  border-radius: 8px;
 }
 
-.button-action mat-icon{
-  color: #C257A4;
+.button-action:hover {
+  background-color: #e9cce1;
+}
+
+.button-action mat-icon {
+  color: #c257a4;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* logo */
+.header__logo {
+  height: 2.8rem;
+}
+
+/* user info container */
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* username text */
+.header__username {
+  font-weight: 500;
+  color: #333;
+}
+
+/* logout button */
+.header__logout {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: -8px;
+}
+
+/* logout icon */
+.header__logout mat-icon {
+  font-size: 1.25rem;
+  color: #666;
+  transition: color 0.2s;
+}
+
+/* hover/focus para o ícone */
+.header__logout:hover mat-icon,
+.header__logout:focus mat-icon {
+  color: #333;
 }
