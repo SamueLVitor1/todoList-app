@@ -1,0 +1,29 @@
+<div class="dialog-container">
+  <h2 mat-dialog-title>Nova Tarefa</h2>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Descrição</mat-label>
+      <input
+        matInput
+        formControlName="description"
+        placeholder="Digite a descrição da tarefa"
+      />
+      <mat-error *ngIf="form.get('description')?.hasError('required')">
+        Descrição é obrigatória
+      </mat-error>
+    </mat-form-field>
+
+    <div class="dialog-actions">
+      <button mat-button type="button" (click)="close()">Cancelar</button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Salvar
+      </button>
+    </div>
+  </form>
+</div>
