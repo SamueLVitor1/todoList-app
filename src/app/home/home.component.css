@@ -129,3 +129,5 @@
 .header__logout:focus mat-icon {
   color: #333;
 }
+
+.list { display: flex; flex-direction: column; gap: 14px; }

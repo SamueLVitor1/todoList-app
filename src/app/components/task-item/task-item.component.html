@@ -1,0 +1,17 @@
+<div class="task-item">
+  <mat-checkbox
+    [checked]="task?.completed"
+    (change)="toggle.emit(task.id)">
+  </mat-checkbox>
+
+  <div class="task-content">
+    <span class="task-text" [class.done]="task?.completed">
+      {{ task?.description }}
+    </span>
+  </div>
+
+  <div class="task-actions">
+    <mat-icon class="action-icon" (click)="delete.emit(task.id)">delete</mat-icon>
+    <mat-icon class="action-icon" (click)="edit.emit(task.id)">edit</mat-icon>
+  </div>
+</div>

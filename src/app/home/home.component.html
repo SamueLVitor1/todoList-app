@@ -33,7 +33,11 @@
       </div>
     </header>
 
-    <button class="button-action" type="button" (click)="openCreateTaskDialog()">
+    <button
+      class="button-action"
+      type="button"
+      (click)="openCreateTaskDialog()"
+    >
       <mat-icon
         aria-hidden="false"
         aria-label="Example home icon"
@@ -41,5 +45,16 @@
       ></mat-icon>
       <span>Nova Tarefa</span>
     </button>
+
+    <div class="list">
+      <app-task-item
+        *ngFor="let t of tasks; trackBy: trackById"
+        [task]="t"
+        (toggle)="onToggle($event)"
+        (delete)="onDelete($event)"
+        (edit)="onEdit($event)"
+      >
+      </app-task-item>
+    </div>
   </main>
 </div>
